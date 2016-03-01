@@ -1,0 +1,72 @@
+* {
+    font-family: Big Caslon, Optima, Helvetica;
+}
+div {
+	border-radius: 5px;
+}
+#header {
+    z-index: 1;
+    position: fixed;
+    width: 99%;
+	margin-top: -20px;
+	height: 60px;
+    border-radius: 5px;
+    background-color: #8B7B8B;
+    margin-bottom: 10px;
+}
+#name {
+    float:left;
+	margin-left: 40px;
+	padding-top: 5px;
+}
+#subheading {
+	margin-left: 10px;
+	padding-top: 10px;
+}
+#email {
+    float:right;
+	margin-right: 40px;
+	padding-top: 15px;
+	color: black;
+	font-weight: bold;
+}
+.left {
+    border-radius: 5px;
+    background-color: #68838B;
+    height: 500px;
+    width: 19%;
+    float: left;
+    margin-top: 50px;
+	margin-bottom: 10px;
+	margin-left: 5px
+}
+.right {
+    border-radius: 5px;
+    background-color: #68838B;
+    height: 500px;
+    width: 79%;
+    float: right;
+    margin-left: 5px;
+	margin-right: 5px;
+	margin-top: 50px;
+}
+.right h4 {
+    margin-left: 10px;
+}
+.right p {
+    margin-left: 20px;
+}
+#footer {
+    position: relative;
+    border-radius: 5px;
+    background-color: #8B7B8B;
+    height: 5%;
+    width: fixed;
+    clear: both;
+    text-align: center;
+}
+#footer p {
+    position: relative;
+    padding-top: 15px;
+}
+
