@@ -1,30 +1,51 @@
 var userChoice = prompt("Do you choose Rock, Paper or Scissors?");
 var computerChoice = Math.random();
-if (computerChoice < 0.34) {
+if (computerChoice <0.2) {
 	computerChoice = "rock";
-} else if(computerChoice <= 0.67) {
+} else if(computerChoice <=0.4) {
 	computerChoice = "paper";
-} else {
+} else if(computerChoice <=0.6) {
 	computerChoice = "scissors";
+} else if(computerChoice <=0.8) {
+	computerChoice = "lizard";
+} else {
+	computerChoice = "spock";
 } console.log("Computer chose: " + computerChoice);
 console.log("You chose: " + userChoice);
 
 var compare = function(choice1, choice2) {
-    if (choice1 === choice2) return("The result is a tie!");
+    if (choice1 === choice2) return("Ties are illogical. - Neckties that is.");
     
     else if (choice1 === "rock") {
-        if (choice2 === "scissors") return("Rock wins!");
-        else return("Paper wins!");
+        if (choice2 === "paper") return("Paper covers rock and you LOSE!");
+        else if (choice2 === "scissors") return("Rock smashes scissors and you WIN!");
+        else if (choice2 === "lizard") return("Rock crushes lizard and you WIN!");
+        else return("Spock vaporizes rock and you LOSE!");
         
-    }else if (choice1 === "paper") {
-        if (choice2 === "rock") return("Paper wins!");
-        else return("Scissors wins!");
-            
-    }else if (choice1 === "scissors") {
-        if (choice2 === "paper") return("Scissors wins!");
-        else return("Rock wins!");
-                
-    }else {
+        
+    } else if (choice1 === "paper") {
+        if (choice2 === "rock") return("Paper covers rock and you WIN!");
+        else if (choice2 === "scissors") return("Scissors cuts paper and you LOSE!");
+        else if (choice2 === "lizard") return("Lizard eats paper and you LOSE!");
+        else return("Paper disproves Spock and you WIN! - Highly Illogical.");
+    
+    } else if (choice1 === "scissors") {
+        if (choice2 === "rock") return("Rock smashes scissors and you LOSE!");
+        else if (choice2 === "paper") return("Scissors cuts paper and you WIN!");
+        else if (choice2 === "lizard") return("Scissors decapitates lizard and you WIN!");
+        else return("Spock smashes scissors and you lose! - Highly Illogical.");
+        
+    } else if (choice1 === "lizard") {
+        if (choice2 === "rock") return("Rock crushes lizard and you LOSE!");
+        else if (choice2 === "paper") return("Lizard eats paper and you WIN!");
+        else if (choice2 === "scissors") return("Scissors decapitates lizard and you LOSE!");
+        else return("Lizard poisons Spock and you WIN! - Highly Illogical.");
+    } else if (choice1 === "spock") {
+        if (choice2 === "rock") return("Spock vaporizes rock and you WIN!");
+        else if (choice2 === "paper") return("Paper disproves Spock and you LOSE! - Highly Illogical.");
+        else if (choice2 === "scissors") return("Spock smashes scissors and you WIN!");
+        else return("Lizard poisons Spock and you LOSE! - Highly Illogical.");
+    } else {
         return("You're Cheating!");
     }
 }
